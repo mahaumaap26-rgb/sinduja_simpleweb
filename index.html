@@ -5,282 +5,354 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Simple Web Solutions | Sinduja Ranganthamani</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Inter,sans-serif;
+scroll-behavior:smooth;
 }
 
-body {
-    background: #20cfc3;
-    color: #111;
+body{
+background:#0b1f1e;
+color:#fff;
+}
+
+/* NAVBAR */
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 10%;
+background:rgba(0,0,0,0.3);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+nav h1{
+font-size:18px;
+color:#20cfc3;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-size:14px;
+opacity:0.8;
+}
+
+nav a:hover{
+opacity:1;
+color:#20cfc3;
 }
 
 /* HERO */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px;
-    background: radial-gradient(circle at top, #ffffff 0%, #20cfc3 60%);
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 20px;
+background:radial-gradient(circle at top,#20cfc3 0%,#0b1f1e 60%);
 }
 
-.hero h1 {
-    font-size: 55px;
-    font-weight: 700;
+.hero h1{
+font-size:60px;
+font-weight:800;
 }
 
-.hero h2 {
-    font-size: 22px;
-    font-weight: 400;
-    margin-top: 10px;
+.hero p{
+max-width:700px;
+margin-top:15px;
+opacity:0.8;
 }
 
-.hero p {
-    margin-top: 15px;
-    max-width: 600px;
-    opacity: 0.8;
+.btn{
+margin-top:25px;
+padding:12px 20px;
+border-radius:10px;
+border:none;
+cursor:pointer;
+font-weight:600;
+text-decoration:none;
+display:inline-block;
 }
 
-.cta {
-    margin-top: 25px;
-    display: flex;
-    gap: 15px;
+.btn-primary{
+background:#20cfc3;
+color:#000;
 }
 
-.btn {
-    padding: 12px 20px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    font-weight: 600;
-    text-decoration: none;
+.btn-outline{
+border:1px solid #20cfc3;
+color:#20cfc3;
+margin-left:10px;
 }
 
-.btn-dark {
-    background: #111;
-    color: #fff;
+/* SECTION */
+section{
+padding:100px 10%;
 }
 
-.btn-light {
-    background: #fff;
-    color: #111;
-}
-
-/* SECTIONS */
-.section {
-    padding: 80px 10%;
-}
-
-.section h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
+h2{
+font-size:34px;
+margin-bottom:30px;
 }
 
 /* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 /* CARDS */
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    transition: 0.3s;
+.card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+padding:25px;
+border-radius:15px;
+transition:0.3s;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+.card:hover{
+transform:translateY(-8px);
+border-color:#20cfc3;
+}
+
+/* STATS */
+.stats{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.stat{
+text-align:center;
+}
+
+.stat h3{
+font-size:30px;
+color:#20cfc3;
 }
 
 /* PRICING */
-.price {
-    font-size: 28px;
-    font-weight: 700;
-    margin-top: 10px;
+.price{
+font-size:30px;
+font-weight:800;
+color:#20cfc3;
+margin-top:10px;
 }
 
-.badge {
-    display: inline-block;
-    padding: 5px 10px;
-    background: #20cfc3;
-    border-radius: 8px;
-    font-size: 12px;
-    margin-bottom: 10px;
+/* TESTIMONIAL */
+.testimonial{
+font-style:italic;
+opacity:0.9;
 }
 
 /* CONTACT */
-.contact {
-    background: #111;
-    color: white;
-    text-align: center;
+.contact-box{
+max-width:500px;
+margin:auto;
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:15px;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    border-radius: 10px;
-    border: none;
+input,textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:10px;
+border:none;
 }
 
-.whatsapp {
-    background: #25D366;
-    color: white;
-    padding: 14px;
-    border-radius: 10px;
-    border: none;
-    width: 100%;
-    font-weight: bold;
-    cursor: pointer;
+button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:#20cfc3;
+font-weight:bold;
+cursor:pointer;
 }
 
-/* FLOAT BUTTON */
-.floating {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    padding: 15px 18px;
-    border-radius: 50px;
-    font-weight: bold;
-    text-decoration: none;
+/* FLOAT WHATSAPP */
+.floating{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
+<nav>
+<h1>Simple Web Solutions</h1>
+<div>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#work">Work</a>
+<a href="#pricing">Pricing</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
 <!-- HERO -->
 <div class="hero">
-    <h1>Simple Web Solutions</h1>
-    <h2>Sinduja Ranganthamani</h2>
-    <p>
-        I build high-converting websites, landing pages & business systems that help companies generate leads and scale online.
-    </p>
+<h1>High-Converting Websites That Sell</h1>
+<p>
+I help businesses turn visitors into paying customers using modern websites, funnels, and automation systems.
+</p>
 
-    <div class="cta">
-        <a href="#contact" class="btn btn-dark">Hire Me</a>
-        <a href="#projects" class="btn btn-light">View Work</a>
-    </div>
+<a href="#contact" class="btn btn-primary">Book a Free Consultation</a>
+<a href="#work" class="btn btn-outline">View Case Studies</a>
 </div>
+
+<!-- STATS -->
+<section>
+<div class="stats">
+<div class="stat">
+<h3>10+</h3>
+<p>Projects Delivered</p>
+</div>
+<div class="stat">
+<h3>100%</h3>
+<p>Client Satisfaction</p>
+</div>
+<div class="stat">
+<h3>$10K+</h3>
+<p>High Ticket Projects</p>
+</div>
+</div>
+</section>
 
 <!-- ABOUT -->
-<div class="section">
-    <h2>About Me</h2>
-    <div class="card">
-        <p>
-            I specialize in building modern, fast and conversion-focused websites for businesses.
-            My focus is not just design — I build systems that generate revenue.
-        </p>
-        <br>
-        <p><b>📞 Oman:</b> +968 98596919</p>
-        <p><b>📞 India:</b> +91 9976471782</p>
-    </div>
+<section id="about">
+<h2>About Me</h2>
+<div class="card">
+<p>
+Hi, I’m <b>Sinduja Ranganthamani</b>. I specialize in building conversion-focused websites that help businesses generate leads and increase revenue.
+</p>
+<br>
+<p><b>📞 Oman:</b> +968 98596919</p>
+<p><b>📞 India:</b> +91 9976471782</p>
 </div>
+</section>
 
 <!-- SERVICES -->
-<div class="section">
-    <h2>Services</h2>
-    <div class="grid">
-        <div class="card">💻 Business Websites</div>
-        <div class="card">🚀 Landing Pages (Ads Conversion)</div>
-        <div class="card">🛒 E-commerce Stores</div>
-        <div class="card">📈 Lead Generation Systems</div>
-        <div class="card">🤖 WhatsApp Automation</div>
-        <div class="card">🔍 SEO Optimization</div>
-    </div>
+<section id="services">
+<h2>Services</h2>
+<div class="grid">
+
+<div class="card">💻 Business Websites</div>
+<div class="card">🚀 Landing Pages for Ads</div>
+<div class="card">🛒 E-commerce Systems</div>
+<div class="card">📈 Lead Generation Funnels</div>
+<div class="card">🤖 WhatsApp Automation</div>
+<div class="card">🔍 SEO Optimization</div>
+
+</div>
+</section>
+
+<!-- WORK -->
+<section id="work">
+<h2>Case Studies</h2>
+<div class="grid">
+
+<div class="card">
+<h3>Real Estate Funnel</h3>
+<p class="testimonial">
+“Improved lead conversion by 3x using landing page system.”
+</p>
 </div>
 
-<!-- PROJECTS -->
-<div class="section" id="projects">
-    <h2>Case Studies</h2>
-    <div class="grid">
-
-        <div class="card">
-            <span class="badge">Lead Gen</span>
-            <h3>Real Estate Funnel</h3>
-            <p>High-conversion landing page for property inquiries.</p>
-        </div>
-
-        <div class="card">
-            <span class="badge">Business</span>
-            <h3>Restaurant Website</h3>
-            <p>Menu + WhatsApp ordering system integrated.</p>
-        </div>
-
-        <div class="card">
-            <span class="badge">Portfolio</span>
-            <h3>Freelancer Portfolio</h3>
-            <p>Personal branding website for client acquisition.</p>
-        </div>
-
-    </div>
+<div class="card">
+<h3>Restaurant Ordering System</h3>
+<p class="testimonial">
+“Automated WhatsApp orders increased daily sales.”
+</p>
 </div>
+
+<div class="card">
+<h3>Freelancer Portfolio</h3>
+<p class="testimonial">
+“Helped client get international projects.”
+</p>
+</div>
+
+</div>
+</section>
 
 <!-- PRICING -->
-<div class="section">
-    <h2>Pricing</h2>
-    <div class="grid">
+<section id="pricing">
+<h2>Pricing</h2>
+<div class="grid">
 
-        <div class="card">
-            <h3>Starter</h3>
-            <p>Basic Landing Page</p>
-            <div class="price">$299</div>
-        </div>
-
-        <div class="card">
-            <h3>Business</h3>
-            <p>Multi-page Website</p>
-            <div class="price">$999</div>
-        </div>
-
-        <div class="card" style="border:2px solid #111;">
-            <h3>Premium Growth</h3>
-            <p>Full Lead Generation System</p>
-            <div class="price">$10,000</div>
-        </div>
-
-    </div>
+<div class="card">
+<h3>Starter</h3>
+<p>Basic Website</p>
+<div class="price">$299</div>
 </div>
+
+<div class="card">
+<h3>Business</h3>
+<p>Full Website</p>
+<div class="price">$999</div>
+</div>
+
+<div class="card" style="border:1px solid #20cfc3;">
+<h3>Premium Growth</h3>
+<p>Funnels + Automation + SEO</p>
+<div class="price">$10,000</div>
+</div>
+
+</div>
+</section>
 
 <!-- CONTACT -->
-<div class="section contact" id="contact">
-    <h2>Contact Me</h2>
+<section id="contact">
+<h2>Let’s Work Together</h2>
 
-    <div style="max-width:500px;margin:auto;">
-        <input type="text" id="name" placeholder="Your Name">
-        <textarea id="msg" placeholder="Your Message"></textarea>
-
-        <button class="whatsapp" onclick="sendWhatsApp()">Send via WhatsApp</button>
-    </div>
+<div class="contact-box">
+<input id="name" placeholder="Your Name">
+<textarea id="msg" placeholder="Project Details"></textarea>
+<button onclick="sendWhatsApp()">Send via WhatsApp</button>
 </div>
 
-<a class="floating" href="https://wa.me/96898596919" target="_blank">
-💬 Chat
-</a>
+</section>
+
+<!-- FLOAT BUTTON -->
+<a class="floating" href="https://wa.me/96898596919" target="_blank">💬 Chat</a>
 
 <script>
-function sendWhatsApp() {
-    let name = document.getElementById("name").value;
-    let msg = document.getElementById("msg").value;
+function sendWhatsApp(){
+let name=document.getElementById("name").value;
+let msg=document.getElementById("msg").value;
 
-    let url = "https://wa.me/96898596919?text=" +
-        "Hello, I'm " + name + ". " + msg;
+let url="https://wa.me/96898596919?text=" +
+"Hi, I'm " + name + ". " + msg;
 
-    window.open(url, "_blank");
+window.open(url,"_blank");
 }
 </script>
 
