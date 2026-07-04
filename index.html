@@ -17,11 +17,11 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#0b1f1e;
+background:#071a19;
 color:#fff;
 }
 
-/* NAVBAR */
+/* NAV */
 nav{
 position:fixed;
 top:0;
@@ -30,8 +30,8 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:15px 10%;
-background:rgba(0,0,0,0.3);
-backdrop-filter:blur(10px);
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(12px);
 z-index:1000;
 }
 
@@ -42,15 +42,15 @@ color:#20cfc3;
 
 nav a{
 color:white;
-margin-left:20px;
+margin-left:18px;
 text-decoration:none;
 font-size:14px;
 opacity:0.8;
 }
 
 nav a:hover{
-opacity:1;
 color:#20cfc3;
+opacity:1;
 }
 
 /* HERO */
@@ -62,7 +62,7 @@ justify-content:center;
 align-items:center;
 text-align:center;
 padding:0 20px;
-background:radial-gradient(circle at top,#20cfc3 0%,#0b1f1e 60%);
+background:radial-gradient(circle at top,#20cfc3 0%,#071a19 60%);
 }
 
 .hero h1{
@@ -98,7 +98,7 @@ color:#20cfc3;
 margin-left:10px;
 }
 
-/* SECTION */
+/* SECTIONS */
 section{
 padding:100px 10%;
 }
@@ -115,11 +115,11 @@ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
-/* CARDS */
+/* CARD */
 .card{
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.1);
-padding:25px;
+padding:20px;
 border-radius:15px;
 transition:0.3s;
 }
@@ -129,27 +129,29 @@ transform:translateY(-8px);
 border-color:#20cfc3;
 }
 
+.card img{
+width:100%;
+border-radius:10px;
+margin-bottom:10px;
+}
+
 /* STATS */
 .stats{
 display:flex;
 justify-content:center;
 gap:40px;
 flex-wrap:wrap;
-margin-top:40px;
-}
-
-.stat{
-text-align:center;
 }
 
 .stat h3{
-font-size:30px;
+font-size:32px;
 color:#20cfc3;
+text-align:center;
 }
 
 /* PRICING */
 .price{
-font-size:30px;
+font-size:28px;
 font-weight:800;
 color:#20cfc3;
 margin-top:10px;
@@ -159,6 +161,7 @@ margin-top:10px;
 .testimonial{
 font-style:italic;
 opacity:0.9;
+margin-top:10px;
 }
 
 /* CONTACT */
@@ -178,6 +181,7 @@ border-radius:10px;
 border:none;
 }
 
+/* BUTTON */
 button{
 width:100%;
 padding:12px;
@@ -188,7 +192,7 @@ font-weight:bold;
 cursor:pointer;
 }
 
-/* FLOAT WHATSAPP */
+/* FLOAT */
 .floating{
 position:fixed;
 bottom:20px;
@@ -219,12 +223,12 @@ font-weight:bold;
 
 <!-- HERO -->
 <div class="hero">
-<h1>High-Converting Websites That Sell</h1>
+<h1>Websites That Generate Revenue</h1>
 <p>
-I help businesses turn visitors into paying customers using modern websites, funnels, and automation systems.
+I build high-converting websites, funnels, and automation systems that help businesses attract customers and increase sales.
 </p>
 
-<a href="#contact" class="btn btn-primary">Book a Free Consultation</a>
+<a href="#contact" class="btn btn-primary">Book a Consultation</a>
 <a href="#work" class="btn btn-outline">View Case Studies</a>
 </div>
 
@@ -251,7 +255,7 @@ I help businesses turn visitors into paying customers using modern websites, fun
 <h2>About Me</h2>
 <div class="card">
 <p>
-Hi, I’m <b>Sinduja Ranganthamani</b>. I specialize in building conversion-focused websites that help businesses generate leads and increase revenue.
+Hi, I’m <b>Sinduja Ranganthamani</b>. I design and build modern websites focused on conversion, branding, and business growth.
 </p>
 <br>
 <p><b>📞 Oman:</b> +968 98596919</p>
@@ -262,14 +266,32 @@ Hi, I’m <b>Sinduja Ranganthamani</b>. I specialize in building conversion-focu
 <!-- SERVICES -->
 <section id="services">
 <h2>Services</h2>
+
 <div class="grid">
 
-<div class="card">💻 Business Websites</div>
-<div class="card">🚀 Landing Pages for Ads</div>
-<div class="card">🛒 E-commerce Systems</div>
-<div class="card">📈 Lead Generation Funnels</div>
-<div class="card">🤖 WhatsApp Automation</div>
-<div class="card">🔍 SEO Optimization</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+💻 <b>Business Websites</b>
+<p>High-quality responsive business websites.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+🚀 <b>Landing Pages</b>
+<p>High-converting marketing pages for ads.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
+🛒 <b>E-commerce</b>
+<p>Online stores optimized for sales.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1557804506-669a67965ba0">
+📈 <b>Lead Funnels</b>
+<p>Automated systems to generate leads daily.</p>
+</div>
 
 </div>
 </section>
@@ -277,27 +299,28 @@ Hi, I’m <b>Sinduja Ranganthamani</b>. I specialize in building conversion-focu
 <!-- WORK -->
 <section id="work">
 <h2>Case Studies</h2>
+
 <div class="grid">
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1560472355-536de3962603">
 <h3>Real Estate Funnel</h3>
-<p class="testimonial">
-“Improved lead conversion by 3x using landing page system.”
-</p>
+<p>Landing page optimized for property leads.</p>
+<p class="testimonial">“3x increase in leads within 2 weeks.”</p>
 </div>
 
 <div class="card">
-<h3>Restaurant Ordering System</h3>
-<p class="testimonial">
-“Automated WhatsApp orders increased daily sales.”
-</p>
+<img src="https://images.unsplash.com/photo-1559339352-11d035aa65de">
+<h3>Restaurant System</h3>
+<p>WhatsApp ordering automation system.</p>
+<p class="testimonial">“Sales increased after automation.”</p>
 </div>
 
 <div class="card">
-<h3>Freelancer Portfolio</h3>
-<p class="testimonial">
-“Helped client get international projects.”
-</p>
+<img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d">
+<h3>Portfolio Website</h3>
+<p>Freelancer branding for global clients.</p>
+<p class="testimonial">“Got international clients fast.”</p>
 </div>
 
 </div>
@@ -306,11 +329,12 @@ Hi, I’m <b>Sinduja Ranganthamani</b>. I specialize in building conversion-focu
 <!-- PRICING -->
 <section id="pricing">
 <h2>Pricing</h2>
+
 <div class="grid">
 
 <div class="card">
 <h3>Starter</h3>
-<p>Basic Website</p>
+<p>Simple Website</p>
 <div class="price">$299</div>
 </div>
 
@@ -331,17 +355,16 @@ Hi, I’m <b>Sinduja Ranganthamani</b>. I specialize in building conversion-focu
 
 <!-- CONTACT -->
 <section id="contact">
-<h2>Let’s Work Together</h2>
+<h2>Let’s Build Your Business</h2>
 
 <div class="contact-box">
 <input id="name" placeholder="Your Name">
-<textarea id="msg" placeholder="Project Details"></textarea>
+<textarea id="msg" placeholder="Your Project Details"></textarea>
 <button onclick="sendWhatsApp()">Send via WhatsApp</button>
 </div>
-
 </section>
 
-<!-- FLOAT BUTTON -->
+<!-- FLOAT -->
 <a class="floating" href="https://wa.me/96898596919" target="_blank">💬 Chat</a>
 
 <script>
@@ -350,7 +373,7 @@ let name=document.getElementById("name").value;
 let msg=document.getElementById("msg").value;
 
 let url="https://wa.me/96898596919?text=" +
-"Hi, I'm " + name + ". " + msg;
+"Hello, I'm " + name + ". " + msg;
 
 window.open(url,"_blank");
 }
