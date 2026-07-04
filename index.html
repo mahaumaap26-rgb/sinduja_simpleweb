@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sinduja Ranganthamani | Simple Web Solutions</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #40E0D0; /* Turquoise */
+        color: #0a0a0a;
+    }
+
+    header {
+        text-align: center;
+        padding: 60px 20px;
+        background: rgba(255,255,255,0.2);
+    }
+
+    h1 {
+        font-size: 42px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-weight: normal;
+        margin-top: 0;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .card {
+        background: white;
+        padding: 20px;
+        margin: 15px 0;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+
+    .project {
+        background: #f7f7f7;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .pricing {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .price-box {
+        flex: 1;
+        min-width: 250px;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 12px;
+        text-align: center;
+    }
+
+    .btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background: #000;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 30px;
+        font-size: 14px;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Simple Web Solutions</h1>
+    <h2>Sinduja Ranganthamani</h2>
+    <p>High-impact websites & digital solutions for businesses</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h3>About Me</h3>
+        <p>
+            I build clean, fast, and conversion-focused websites for startups and businesses.
+            My focus is delivering high-quality digital solutions that help clients grow online presence and generate revenue.
+        </p>
+        <p><b>Phone (Oman):</b> +968 98596919</p>
+        <p><b>Phone (India):</b> +91 9976471782</p>
+    </div>
+
+    <div class="card">
+        <h3>My Services</h3>
+        <ul>
+            <li>Business Websites</li>
+            <li>Landing Pages for Ads</li>
+            <li>E-commerce Stores</li>
+            <li>Portfolio Websites</li>
+            <li>WhatsApp & Lead Automation</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Sample Projects</h3>
+        <div class="projects">
+            <div class="project">Real Estate Landing Page (Lead Generation)</div>
+            <div class="project">Restaurant Website with Online Menu</div>
+            <div class="project">Personal Portfolio for Freelancer</div>
+            <div class="project">E-commerce Store (Shopify Style)</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Pricing Packages</h3>
+        <div class="pricing">
+            <div class="price-box">
+                <h4>Starter</h4>
+                <p>Simple Landing Page</p>
+                <h2>$299</h2>
+            </div>
+
+            <div class="price-box">
+                <h4>Business</h4>
+                <p>Full Website (5–7 pages)</p>
+                <h2>$999</h2>
+            </div>
+
+            <div class="price-box">
+                <h4>Premium Growth</h4>
+                <p>High-converting system + SEO + WhatsApp leads</p>
+                <h2>$10,000</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Contact Me</h3>
+
+        <form onsubmit="sendWhatsApp(); return false;">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="text" id="message" placeholder="Your Message" required>
+            <button class="btn" type="submit">Send via WhatsApp</button>
+        </form>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Simple Web Solutions | Built by Sinduja Ranganthamani
+</footer>
+
+<script>
+function sendWhatsApp() {
+    let name = document.getElementById("name").value;
+    let message = document.getElementById("message").value;
+
+    let phone = "96898596919"; // default WhatsApp number (Oman)
+
+    let url = "https://wa.me/" + phone + 
+              "?text=Hello, my name is " + name + 
+              ". " + message;
+
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
